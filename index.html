@@ -4,90 +4,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>gallery</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <link rel="stylesheet" href="style.css">
-    <h1>SAYLANI WALL</h1>
-    <div class="wall">
+    <header>
+        <nav>
+            <div>
+                <img src="data:image/png;base64,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"
+                    alt="">
+                <i class="fa-solid fa-bars"></i>
+                <p>Categories</p>
 
-        <div>
-            <img src="done.jpg" alt="loding">
+            </div>
+            <div class="bar">
+                <form action="style.css">
+                    <label for="search">
+                        <input type="search" id="search" placeholder="Search for anything">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </label>
+            </div>
+            <span class="search">Search</span>
+            <div class="heart">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+
+            </form>
+        </nav>
+        <div class="po">
+            <h1>Find things you'll love. Support independent sellers. Only on Etsy.</h1>
         </div>
-        <div>
-            <img src="download.jpg" alt="loding">
+        <div class="game">
+            <p>Personalized Gift</p>
+            <img src="https://i.etsystatic.com/25792760/r/il/5da611/3405911484/il_300x300.3405911484_go20.jpg" alt="">
+            <p>Diy And Craft</p>
+            <img src="https://i.etsystatic.com/20442851/c/2000/2000/500/0/il/a99d85/2952846478/il_300x300.2952846478_jtqc.jpg"
+                alt="">
+            <p>For kids and babies</p>
+            <img src="https://i.etsystatic.com/14340206/r/il/34b534/5662388029/il_300x300.5662388029_1aa2.jpg" alt="">
+            <p>Jewellery</p>
+            <img src="https://i.etsystatic.com/5824932/c/1538/1538/355/215/il/1dd019/1884746319/il_300x300.1884746319_o3sd.jpg"
+                alt="">
+            <p class="pp">Wedding/engage </p>
+            <img src="https://i.etsystatic.com/17207134/c/769/769/197/59/il/913c7a/3121451996/il_300x300.3121451996_695g.jpg"
+                alt="">
+            <p>ON SALE</p>
+            <img src="https://i.etsystatic.com/13346155/c/2734/2734/0/0/il/858e00/5080130415/il_300x300.5080130415_qb0m.jpg"
+                alt="">
         </div>
-        <div>
-            <img src="fareed.jpg" alt="loding">
-        </div>
-        <div>
-            <img src="help.jpg" alt="loding">
-        </div>
-        <div>
-            <img src="hp.jpg" alt="loding">
-        </div>
-        <div>
-            <img src="done.jpg" alt="loding">
-        </div>
-        <div>
-            <img src="download.jpg" alt="loding">
-        </div>
-        <div>
-            <img src="fareed.jpg" alt="loding">
-        </div>
-        <div>
-            <img src="help.jpg" alt="loding">
-        </div>
-        <div>
-            <img src="hp.jpg" alt="loding">
-        </div>
-        <div>
-            <img src="help.jpg" alt="loding">
-        </div>
-        <div>
-            <img src="hp.jpg" alt="loding">
-        </div>
-        <div>
-            <img src="download.jpg" alt="loding">
-        </div>
-        <div>
-            <img src="fareed.jpg" alt="loding">
-        </div>
-        <div>
-            <img src="help.jpg" alt="loding">
-        </div>
-        <div>
-            <img src="hp.jpg" alt="loding">
-        </div>
-        <div>
-            <img src="help.jpg" alt="loding">
-        </div>
-        <div>
-            <img src="done.jpg" alt="loding">
-        </div>
-        <div>
-            <img src="download.jpg" alt="loding">
-        </div>
-        <div class="center">
-            <img src="fareed.jpg" alt="loding">
-        </div>
-        <div>
-            <img src="help.jpg" alt="loding">
-        </div>
-        <div>
-            <img src="hp.jpg" alt="loding">
-        </div>
-        <div>
-            <img src="done.jpg" alt="loding">
-        </div>
-        <div>
-            <img src="help.jpg" alt="loding">
+        <div class="d">
+            <h1>SHOP BY Categories</h1>
         </div>
 
+        <div class="sec-img">
+
+            <img class="one"
+                src="https://i.etsystatic.com/11326925/c/1512/1201/0/310/il/582a10/3704219961/il_680x540.3704219961_ckr2.jpg"
+                alt="">
+            <img class="two"
+                src="https://i.etsystatic.com/5204269/c/888/706/201/265/il/462ec1/1000393416/il_680x540.1000393416_qf5c.jpg"
+                alt="">
+            <img class="three"
+                src="https://i.etsystatic.com/9986723/r/il/c489a7/3784663223/il_680x540.3784663223_eum8.jpg" alt="">
+            <img class="four"
+                src="https://i.etsystatic.com/21475936/c/2000/1589/0/1341/il/63335d/4055185948/il_680x540.4055185948_gpg6.jpg"
+                alt="">
+            <img class="five" src="https://i.etsystatic.com/5694172/r/il/b56e39/480340698/il_680x540.480340698_4y6r.jpg"
+                alt="">
+            <img class="six"
+                src="https://i.etsystatic.com/14367613/r/il/132de7/4895345185/il_680x540.4895345185_abr9.jpg" alt="">
+            <img class="seven"
+                src="https://i.etsystatic.com/5863761/c/1923/1527/16/743/il/8cbd6c/1390117214/il_680x540.1390117214_f338.jpg"
+                alt="">
+            <img class="eight"
+                src="https://i.etsystatic.com/5681268/r/il/1a172e/1340668142/il_680x540.1340668142_gl4u.jpg" alt="">
+            <img class="nine"
+                src="https://i.etsystatic.com/27025196/c/2025/1611/0/0/il/d7ed4a/4993068433/il_680x540.4993068433_99hf.jpg"
+                alt="">
+            <img class="ten"
+                src="https://i.etsystatic.com/11544420/c/2777/2207/118/35/il/c420f3/5339022152/il_680x540.5339022152_oz9w.jpg"
+                alt="">
+            <img class="eleven"
+                src="https://i.etsystatic.com/5346900/r/il/e857f2/1331010370/il_680x540.1331010370_aepa.jpg" alt="">
+            <img class="twelve"
+                src="https://i.etsystatic.com/10929740/r/il/7910c0/1010913032/il_680x540.1010913032_gzsb.jpg" alt="">
+        </div>
 
 
-    </div>
+
+        <div class="more">
+            <h3 a href="/">SHOW MORE</h3>
+        </div>
+
+        <div class="popular ">
+            <h1> <b>Popular gifts right now</b></h1>
+        </div>
+
+        <div class="namkeen">
+            <div class="first"><span>Annivasary gifts</span> <img src="https://i.etsystatic.com/6473273/r/il/4dede6/3158233318/il_340x270.3158233318_r0mf.jpg" alt=""></div>
+            <div class="second"><span>Gifts for him</span> <img src="https://i.etsystatic.com/18922075/r/il/a2f6fd/3007384323/il_340x270.3007384323_11i0.jpg" alt=""></div>
+            <div class="third"><span>Gifts for her</span><img src="https://i.etsystatic.com/20922675/r/il/e5332f/4993914558/il_340x270.4993914558_c6cv.jpg" alt=""></div>
+            <div class="forth"><span>Personalized gift</span><img src="https://i.etsystatic.com/6322679/r/il/6e2e53/1668127003/il_340x270.1668127003_kwjn.jpg" alt=""></div>
+            <div class="fifth"><span>Wedding gifts</span><img src="https://i.etsystatic.com/12468628/r/il/e77eb3/4564121111/il_340x270.4564121111_m7ur.jpg" alt=""></div>
+        </div>
+
+
+
+
 
 </body>
 
